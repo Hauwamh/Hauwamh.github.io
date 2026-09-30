@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP | html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>AfroBrunch Financial Model | Hauwa Muhammed</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Three-statement financial model, scenario analysis and valuation for a café and fitness studio." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+<style>
+  :root{--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--ink:#212931;--ink2:#52514e;--grid:#e6e6e3;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:0 0 2.5rem 0;}
+  .kpi{border:solid 2px #eeeeee;padding:1.1rem 1.2rem;text-align:left;}
+  .kpi .v{font-family:"Merriweather",Georgia,serif;font-size:1.6rem;font-weight:900;color:var(--ink);line-height:1.2;display:block;}
+  .kpi .l{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);display:block;margin-top:.35rem;line-height:1.5;}
+  .chart-card{margin:0 0 2.5rem 0;}
+  .chart-card h3{margin-bottom:.3rem;}
+  .chart-card p.sub{font-size:.85rem;color:var(--ink2);margin:0 0 1rem 0;}
+  .chart-box{position:relative;height:320px;width:100%;}
+  .toggle{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem 0;}
+  .toggle button{font-size:.65rem;height:2.4rem;line-height:2.4rem;padding:0 1.1rem;}
+  .toggle button.on{background:var(--ink);color:#fff !important;}
+  .findings li{margin-bottom:.6rem;}
+  .tools span{display:inline-block;border:solid 1px #ccc;padding:.1rem .6rem;margin:0 .35rem .4rem 0;font-size:.75rem;}
+  table.data td,table.data th{font-size:.85rem;padding:.5rem .75rem;}
+  @media (max-width:736px){.chart-box{height:260px;}}
+</style>
+
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+
+				<header id="header">
+					<a href="index.html" class="logo">Hauwa Muhammed</a>
+				</header>
+				<nav id="nav">
+					<ul class="links">
+							<li><a href="index.html">Projects</a></li>
+							<li class="active"><a href="afrobrunch.html">AfroBrunch Model</a></li>
+							<li><a href="trendmart.html">TrendMart Margins</a></li>
+							<li><a href="vector-university.html">Vector University</a></li>
+							<li><a href="nextgen-hr.html">NextGen HR</a></li>
+							<li><a href="novamed.html">NovaMed Sales</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/hauwa-muhammed-hassan-aca-8396751b7/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/Hauwamh" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto:muhammedhauwahassan@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</nav>
+
+				<div id="main">
+<section class="post">
+<header class="major">
+<span class="date">Financial modelling · Excel</span>
+<h1>AfroBrunch Café<br />&amp; Fitness Studio</h1>
+<p>A full three-statement financial model (P&amp;L, cash flow and balance sheet) that takes a hybrid café and boutique fitness concept from an idea to a fundable business case: 60 months, seasonality-adjusted, stress-tested across three scenarios and valued two ways.</p>
+</header><div class="image main"><img src="images/afrobrunch-cover.jpg" alt="Coffee being served in a café" /></div><p class="tools"><span>Excel</span><span>3-statement model</span><span>DCF valuation</span><span>EBITDA multiples</span><span>Scenario analysis</span><span>Break-even</span><span>Loan schedule</span></p><h2>Headline results (base case)</h2><div class="kpis"><div class="kpi"><span class="v">£109.8k</span><span class="l">Start-up capital required</span></div><div class="kpi"><span class="v">£336.7k</span><span class="l">Year 5 revenue</span></div><div class="kpi"><span class="v">£94.6k</span><span class="l">Year 5 EBITDA (28% margin)</span></div><div class="kpi"><span class="v">£233k</span><span class="l">Equity value (DCF, 20% discount rate)</span></div><div class="kpi"><span class="v">8 a day</span><span class="l">Café covers of headroom over break-even (65 vs 57)</span></div></div><div class="chart-card"><h3>Revenue, EBITDA and net profit</h3><p class="sub">Base case, Years 1–5. Year 1 is a loss while footfall builds; margins settle at 28% EBITDA by Year 5. Hover for values.</p><div class="chart-box"><canvas id="abPL" aria-label="Revenue, EBITDA and net profit" role="img"></canvas></div></div><div class="chart-card"><h3>Monthly revenue: seasonality and ramp-up</h3><p class="sub">Year 1 ramps from £9.1k to £21.9k a month; later years follow a summer peak. Pick a year to compare with Year 1.</p><div class="toggle" id="abYearBtns"></div><div class="chart-box"><canvas id="abMonthly" aria-label="Monthly revenue: seasonality and ramp-up" role="img"></canvas></div></div><div class="chart-card"><h3>What if footfall is lower, or higher?</h3><p class="sub">Worst / Base / Best cases vary covers per day, class numbers, membership take-up and growth. Cost assumptions stay fixed. Switch the metric:</p><div class="toggle" id="abScenBtns"></div><div class="chart-box"><canvas id="abScen" aria-label="What if footfall is lower, or higher?" role="img"></canvas></div></div><h2>What the model shows</h2><ul class="findings">
+<li><strong>Viable, but thin in Year 1.</strong> EBITDA is only £4.4k in Year 1 and net profit is negative (-£13.3k), so the 3-month working-capital buffer built into start-up costs is essential.</li>
+<li><strong>Headroom over break-even is modest.</strong> Monthly break-even revenue is £15.9k, or about 57 café covers a day against 65 assumed: roughly 8 covers of headroom.</li>
+<li><strong>Downside risk is real.</strong> In the worst case, cash is negative by the end of Year 1 (-£31k) and keeps falling, so the lender would need covenants tied to footfall.</li>
+<li><strong>Two valuation methods, one range.</strong> DCF puts equity value at £233k; EBITDA multiples of 2–4x (UK small cafés and gyms) put it at £394k–£583k because the business builds up net cash by Year 5.</li>
+</ul><h2>Explore the files</h2><ul class="actions"><li><a href="files/AfroBrunch_Financial_Model.xlsx" class="button primary icon solid fa-download" download>Download the Excel model</a></li><li><a href="https://docs.google.com/spreadsheets/d/1_C8u-IqkFNfyofFkvFHYtyveqSEnVkNX/edit?usp=drive_link" class="button icon solid fa-file-excel" target="_blank" rel="noopener">View in Google Sheets</a></li></ul><ul class="actions"><li><a href="index.html" class="button icon solid fa-arrow-left">All projects</a></li></ul></section>
+				</div>
+
+				<footer id="footer">
+					<section>
+						<h3>About me</h3>
+						<p>Financial Analyst and ACCA Finalist (2 papers remaining) with a BSc in Accounting and 3+ years in finance across the UK and Nigeria. I build financial models, Power BI dashboards and SQL analysis that turn raw numbers into clear decisions.</p>
+						<ul class="actions">
+							<li><a href="mailto:muhammedhauwahassan@gmail.com" class="button">Email me</a></li>
+						</ul>
+					</section>
+					<section class="split contact">
+						<section class="alt">
+							<h3>Location</h3>
+							<p>Essex / London, UK<br />Open to hybrid and remote roles</p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="mailto:muhammedhauwahassan@gmail.com">muhammedhauwahassan@gmail.com</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/hauwa-muhammed-hassan-aca-8396751b7/" class="icon brands alt fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/Hauwamh" class="icon brands alt fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+				<div id="copyright">
+					<ul><li>&copy; Hauwa Muhammed</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+			</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+<script src="assets/js/chart.umd.min.js"></script>
+<script>
+Chart.defaults.font.family='"Source Sans Pro",Helvetica,sans-serif';
+Chart.defaults.font.size=13;
+Chart.defaults.color='#52514e';
+Chart.defaults.borderColor='#e6e6e3';
+Chart.defaults.plugins.tooltip.backgroundColor='#212931';
+Chart.defaults.plugins.tooltip.padding=10;
+Chart.defaults.plugins.legend.labels.usePointStyle=true;
+Chart.defaults.plugins.legend.labels.boxWidth=8;
+Chart.defaults.maintainAspectRatio=false;
+const C={s1:'#2a78d6',s2:'#eb6834',s3:'#1baf7a'};
+const gbp=(v,d=1)=>{const a=Math.abs(v),s=v<0?'-':'';return a>=1e6?s+'£'+(a/1e6).toFixed(d)+'m':a>=1e3?s+'£'+(a/1e3).toFixed(0)+'k':s+'£'+a.toFixed(0)};
+const pct=(v,d=1)=>(v*100).toFixed(d)+'%';
+const bar=(ds)=>Object.assign({borderRadius:4,borderSkipped:'start',maxBarThickness:42},ds);
+const line=(ds)=>Object.assign({borderWidth:2,pointRadius:0,pointHoverRadius:5,tension:.25},ds);
+const hoverIdx={mode:'index',intersect:false};
+</script>
+<script>
+
+const AB={"years": ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5"], "revenue": [194579, 285570, 308416, 326920, 336728], "ebitda": [4393, 62548, 76872, 88474, 94623], "net": [-13257, 35733, 47226, 56737, 62220], "cash": [16855, 50697, 95031, 147797, 204884], "monthly": [[9137.8, 10471.06, 11834.39, 13392.06, 14940.59, 17445.39, 19038.19, 18300.83, 18344.81, 19425.48, 20319.85, 21928.8], [22749.48, 22911.76, 22740.85, 23236.3, 23731.76, 25502.56, 26071.13, 23699.06, 22740.85, 23236.3, 23731.76, 25218.12], [24569.44, 24744.7, 24560.12, 25095.21, 25630.3, 27542.76, 28156.82, 25594.98, 24560.12, 25095.21, 25630.3, 27235.57], [26043.61, 26229.38, 26033.72, 26600.92, 27168.12, 29195.33, 29846.23, 27130.68, 26033.72, 26600.92, 27168.12, 28869.71], [26824.91, 27016.26, 26814.74, 27398.95, 27983.16, 30071.19, 30741.62, 27944.6, 26814.74, 27398.95, 27983.16, 29735.8]], "scen": {"Worst": {"y1rev": 117896, "y1e": -45246, "y5rev": 156104, "y5e": -20654, "c1": -30967, "c5": -173811}, "Base": {"y1rev": 194579, "y1e": 4393, "y5rev": 336728, "y5e": 94623, "c1": 14587, "c5": 197994}, "Best": {"y1rev": 270110, "y1e": 52934, "y5rev": 623497, "y5e": 277017, "c1": 56387, "c5": 677608}}};
+new Chart(abPL,{type:'bar',data:{labels:AB.years,datasets:[
+ bar({label:'Revenue',data:AB.revenue,backgroundColor:C.s1}),
+ bar({label:'EBITDA',data:AB.ebitda,backgroundColor:C.s2}),
+ bar({label:'Net profit',data:AB.net,backgroundColor:C.s3})]},
+ options:{interaction:hoverIdx,scales:{y:{ticks:{callback:v=>gbp(v)}},x:{grid:{display:false}}},plugins:{tooltip:{callbacks:{label:c=>c.dataset.label+': '+gbp(c.raw)}}}}});
+const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const mChart=new Chart(abMonthly,{type:'line',data:{labels:months,datasets:[
+ line({label:'Year 1',data:AB.monthly[0],borderColor:C.s2,backgroundColor:C.s2}),
+ line({label:'Year 5',data:AB.monthly[4],borderColor:C.s1,backgroundColor:C.s1})]},
+ options:{interaction:hoverIdx,scales:{y:{beginAtZero:true,ticks:{callback:v=>gbp(v)}},x:{grid:{display:false}}},plugins:{tooltip:{callbacks:{label:c=>c.dataset.label+': '+gbp(c.raw)}}}}});
+const yb=document.getElementById('abYearBtns');
+[2,3,4,5].forEach(y=>{const b=document.createElement('button');b.className='button'+(y==5?' on':'');b.textContent='Year '+y;b.onclick=()=>{
+ yb.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ mChart.data.datasets[1].label='Year '+y;mChart.data.datasets[1].data=AB.monthly[y-1];mChart.update();};yb.appendChild(b);});
+const metrics={'Revenue':['y1rev','y5rev'],'EBITDA':['y1e','y5e'],'Closing cash':['c1','c5']};
+const sc=['Worst','Base','Best'],scCol=[C.s2,C.s1,C.s3];
+const sChart=new Chart(abScen,{type:'bar',data:{labels:['Year 1','Year 5'],datasets:sc.map((s,i)=>bar({label:s+' case',data:metrics['Revenue'].map(k=>AB.scen[s][k]),backgroundColor:scCol[i]}))},
+ options:{interaction:hoverIdx,scales:{y:{ticks:{callback:v=>gbp(v)}},x:{grid:{display:false}}},plugins:{tooltip:{callbacks:{label:c=>c.dataset.label+': '+gbp(c.raw)}}}}});
+const sb=document.getElementById('abScenBtns');
+Object.keys(metrics).forEach((m,i)=>{const b=document.createElement('button');b.className='button'+(i==0?' on':'');b.textContent=m;b.onclick=()=>{
+ sb.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ sChart.data.datasets.forEach((d,j)=>d.data=metrics[m].map(k=>AB.scen[sc[j]][k]));sChart.update();};sb.appendChild(b);});
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP | html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>TrendMart Profitability Analysis | Hauwa Muhammed</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Root-cause analysis of a 48% fall in operating profit at a UK fashion retailer." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+<style>
+  :root{--s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--ink:#212931;--ink2:#52514e;--grid:#e6e6e3;}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin:0 0 2.5rem 0;}
+  .kpi{border:solid 2px #eeeeee;padding:1.1rem 1.2rem;text-align:left;}
+  .kpi .v{font-family:"Merriweather",Georgia,serif;font-size:1.6rem;font-weight:900;color:var(--ink);line-height:1.2;display:block;}
+  .kpi .l{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);display:block;margin-top:.35rem;line-height:1.5;}
+  .chart-card{margin:0 0 2.5rem 0;}
+  .chart-card h3{margin-bottom:.3rem;}
+  .chart-card p.sub{font-size:.85rem;color:var(--ink2);margin:0 0 1rem 0;}
+  .chart-box{position:relative;height:320px;width:100%;}
+  .toggle{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem 0;}
+  .toggle button{font-size:.65rem;height:2.4rem;line-height:2.4rem;padding:0 1.1rem;}
+  .toggle button.on{background:var(--ink);color:#fff !important;}
+  .findings li{margin-bottom:.6rem;}
+  .tools span{display:inline-block;border:solid 1px #ccc;padding:.1rem .6rem;margin:0 .35rem .4rem 0;font-size:.75rem;}
+  table.data td,table.data th{font-size:.85rem;padding:.5rem .75rem;}
+  @media (max-width:736px){.chart-box{height:260px;}}
+</style>
+
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+
+				<header id="header">
+					<a href="index.html" class="logo">Hauwa Muhammed</a>
+				</header>
+				<nav id="nav">
+					<ul class="links">
+							<li><a href="index.html">Projects</a></li>
+							<li><a href="afrobrunch.html">AfroBrunch Model</a></li>
+							<li class="active"><a href="trendmart.html">TrendMart Margins</a></li>
+							<li><a href="vector-university.html">Vector University</a></li>
+							<li><a href="nextgen-hr.html">NextGen HR</a></li>
+							<li><a href="novamed.html">NovaMed Sales</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/hauwa-muhammed-hassan-aca-8396751b7/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/Hauwamh" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto:muhammedhauwahassan@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</nav>
+
+				<div id="main">
+<section class="post">
+<header class="major">
+<span class="date">Profitability analysis · Excel &amp; Power BI</span>
+<h1>TrendMart Retail:<br />Where did the profit go?</h1>
+<p>Revenue held steady in 2024, but operating profit almost halved. Using 24 months of sales, cost and campaign data across five UK stores, I traced the margin collapse to its root cause: discounting doubled overnight.</p>
+</header><p class="tools"><span>Excel</span><span>Power BI</span><span>Power Query</span><span>Pivot tables</span><span>Variance analysis</span><span>Volume vs price diagnostic</span><span>KPI design</span></p><h2>2024 vs 2023</h2><div class="kpis"><div class="kpi"><span class="v">+1.3%</span><span class="l">Net revenue (£28.6m → £28.9m)</span></div><div class="kpi"><span class="v">-48%</span><span class="l">Operating profit (£6.8m → £3.5m)</span></div><div class="kpi"><span class="v">45% → 36%</span><span class="l">Gross margin</span></div><div class="kpi"><span class="v">7% → 15%</span><span class="l">Average discount rate</span></div><div class="kpi"><span class="v">+10% / -8%</span><span class="l">Units sold / average selling price</span></div></div><div class="chart-card"><h3>The margin break: January 2024</h3><p class="sub">Gross margin, operating margin and discount rate by month. All three move together in one month, and none of them recover. Hover for values.</p><div class="chart-box"><canvas id="tmMargin" aria-label="The margin break: January 2024" role="img"></canvas></div></div><div class="chart-card"><h3>Revenue stayed flat, profit did not</h3><p class="sub">Monthly net revenue vs operating profit, same £ scale.</p><div class="chart-box"><canvas id="tmRevOp" aria-label="Revenue stayed flat, profit did not" role="img"></canvas></div></div><div class="chart-card"><h3>Product mix: revenue vs gross margin</h3><p class="sub">Womenswear and Menswear drive 53% of revenue at the lowest margins (38%); Accessories earns 50%. Switch the view:</p><div class="toggle" id="tmMixBtns"></div><div class="chart-box"><canvas id="tmMix" aria-label="Product mix: revenue vs gross margin" role="img"></canvas></div></div><h2>Findings</h2><ul class="findings">
+<li><strong>Price, not volume, is the problem.</strong> Units sold rose 10% in 2024, but the average selling price fell 8% (£26.46 → £24.39) as the average discount doubled from 7.4% to 14.5%.</li>
+<li><strong>The break is a single event.</strong> My variance model flags January 2024 as the only month where 6 of 8 metrics moved more than 1.5 standard deviations at once. Total costs grew 14% that month while revenue fell 3%.</li>
+<li><strong>Costs grew on top of discounting.</strong> Cost of sales rose 18% and operating expenses 13% year on year (staff costs +16%), against revenue growth of just 1.3%.</li>
+<li><strong>All five stores are affected equally.</strong> Every store runs at a 40–41% gross margin and 18–19% operating margin over the two years, so the issue is company-wide pricing policy, not one store.</li>
+</ul>
+<h2>Recommendations</h2><ul class="findings">
+<li>Cap blanket discounts and target them by category: Accessories and Kidswear can absorb promotions; Womenswear and Menswear cannot.</li>
+<li>Review the January 2024 supplier and staffing changes behind the jump in cost of sales and staff costs.</li>
+<li>Track discount %, gross margin % and ASP monthly on the Power BI dashboard, with alerts on the thresholds used in the variance model.</li>
+</ul><h2>Explore the files</h2><ul class="actions"><li><a href="files/TrendMart_Retail_Analysis.xlsx" class="button primary icon solid fa-download" download>Download the Excel analysis</a></li><li><a href="files/TrendMart_Profitability_Analysis.pbix" class="button icon solid fa-chart-line" download>Download the Power BI file</a></li></ul><ul class="actions"><li><a href="index.html" class="button icon solid fa-arrow-left">All projects</a></li></ul></section>
+				</div>
+
+				<footer id="footer">
+					<section>
+						<h3>About me</h3>
+						<p>Financial Analyst and ACCA Finalist (2 papers remaining) with a BSc in Accounting and 3+ years in finance across the UK and Nigeria. I build financial models, Power BI dashboards and SQL analysis that turn raw numbers into clear decisions.</p>
+						<ul class="actions">
+							<li><a href="mailto:muhammedhauwahassan@gmail.com" class="button">Email me</a></li>
+						</ul>
+					</section>
+					<section class="split contact">
+						<section class="alt">
+							<h3>Location</h3>
+							<p>Essex / London, UK<br />Open to hybrid and remote roles</p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="mailto:muhammedhauwahassan@gmail.com">muhammedhauwahassan@gmail.com</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/hauwa-muhammed-hassan-aca-8396751b7/" class="icon brands alt fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/Hauwamh" class="icon brands alt fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+				<div id="copyright">
+					<ul><li>&copy; Hauwa Muhammed</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+			</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+<script src="assets/js/chart.umd.min.js"></script>
+<script>
+Chart.defaults.font.family='"Source Sans Pro",Helvetica,sans-serif';
+Chart.defaults.font.size=13;
+Chart.defaults.color='#52514e';
+Chart.defaults.borderColor='#e6e6e3';
+Chart.defaults.plugins.tooltip.backgroundColor='#212931';
+Chart.defaults.plugins.tooltip.padding=10;
+Chart.defaults.plugins.legend.labels.usePointStyle=true;
+Chart.defaults.plugins.legend.labels.boxWidth=8;
+Chart.defaults.maintainAspectRatio=false;
+const C={s1:'#2a78d6',s2:'#eb6834',s3:'#1baf7a'};
+const gbp=(v,d=1)=>{const a=Math.abs(v),s=v<0?'-':'';return a>=1e6?s+'£'+(a/1e6).toFixed(d)+'m':a>=1e3?s+'£'+(a/1e3).toFixed(0)+'k':s+'£'+a.toFixed(0)};
+const pct=(v,d=1)=>(v*100).toFixed(d)+'%';
+const bar=(ds)=>Object.assign({borderRadius:4,borderSkipped:'start',maxBarThickness:42},ds);
+const line=(ds)=>Object.assign({borderWidth:2,pointRadius:0,pointHoverRadius:5,tension:.25},ds);
+const hoverIdx={mode:'index',intersect:false};
+</script>
+<script>
+
+const TM={"months": ["Jan 23", "Feb 23", "Mar 23", "Apr 23", "May 23", "Jun 23", "Jul 23", "Aug 23", "Sep 23", "Oct 23", "Nov 23", "Dec 23", "Jan 24", "Feb 24", "Mar 24", "Apr 24", "May 24", "Jun 24", "Jul 24", "Aug 24", "Sep 24", "Oct 24", "Nov 24", "Dec 24"], "rev": [2329918, 2487689, 2444791, 2436377, 2336372, 2423491, 2219220, 2450806, 2400931, 2284842, 2279626, 2491954, 2423696, 2357449, 2338098, 2357454, 2542740, 2447756, 2297133, 2377320, 2373029, 2437406, 2538510, 2455425], "op": [550269, 617905, 608990, 582904, 553212, 572757, 494921, 593490, 582267, 515062, 541669, 616662, 280056, 263516, 280085, 260687, 356219, 321039, 241127, 286634, 289763, 301227, 354573, 314674], "gm": [0.454, 0.4522, 0.4546, 0.4524, 0.4532, 0.4506, 0.4537, 0.4523, 0.4548, 0.4559, 0.4582, 0.4496, 0.3572, 0.3635, 0.3617, 0.3576, 0.3629, 0.3666, 0.361, 0.3619, 0.3632, 0.3647, 0.3557, 0.3586], "om": [0.2362, 0.2484, 0.2491, 0.2393, 0.2368, 0.2363, 0.223, 0.2422, 0.2425, 0.2254, 0.2376, 0.2475, 0.1155, 0.1118, 0.1198, 0.1106, 0.1401, 0.1312, 0.105, 0.1206, 0.1221, 0.1236, 0.1397, 0.1282], "disc": [0.0742, 0.0784, 0.073, 0.076, 0.0755, 0.0758, 0.0733, 0.0741, 0.072, 0.0714, 0.0719, 0.0765, 0.1487, 0.1431, 0.145, 0.1485, 0.1436, 0.1421, 0.1454, 0.1436, 0.1457, 0.1447, 0.1447, 0.1468], "cats": ["Womenswear", "Menswear", "Kidswear", "Footwear", "Accessories"], "catRev": [16277172, 14436800, 10760541, 8907836, 7149684], "catGM": [0.38, 0.38, 0.43, 0.41, 0.5]};
+new Chart(tmMargin,{type:'line',data:{labels:TM.months,datasets:[
+ line({label:'Gross margin',data:TM.gm,borderColor:C.s1,backgroundColor:C.s1}),
+ line({label:'Operating margin',data:TM.om,borderColor:C.s3,backgroundColor:C.s3}),
+ line({label:'Discount rate',data:TM.disc,borderColor:C.s2,backgroundColor:C.s2,borderDash:[5,4]})]},
+ options:{interaction:hoverIdx,scales:{y:{beginAtZero:true,max:.5,ticks:{callback:v=>pct(v,0)}},x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:8}}},plugins:{tooltip:{callbacks:{label:c=>c.dataset.label+': '+pct(c.raw)}}}}});
+new Chart(tmRevOp,{type:'line',data:{labels:TM.months,datasets:[
+ line({label:'Net revenue',data:TM.rev,borderColor:C.s1,backgroundColor:C.s1}),
+ line({label:'Operating profit',data:TM.op,borderColor:C.s2,backgroundColor:C.s2})]},
+ options:{interaction:hoverIdx,scales:{y:{beginAtZero:true,ticks:{callback:v=>gbp(v)}},x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:8}}},plugins:{tooltip:{callbacks:{label:c=>c.dataset.label+': '+gbp(c.raw,2)}}}}});
+const mixViews={'Net revenue':{d:TM.catRev,f:v=>gbp(v)},'Gross margin %':{d:TM.catGM,f:v=>pct(v,0)}};
+let curMix='Net revenue';
+const mix=new Chart(tmMix,{type:'bar',data:{labels:TM.cats,datasets:[bar({label:'Net revenue',data:TM.catRev,backgroundColor:C.s1,borderSkipped:'start'})]},
+ options:{indexAxis:'y',scales:{x:{beginAtZero:true,ticks:{callback:v=>mixViews[curMix].f(v)}},y:{grid:{display:false}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+mixViews[c.dataset.label].f(c.raw)}}}}});
+const mb=document.getElementById('tmMixBtns');
+Object.keys(mixViews).forEach((m,i)=>{const b=document.createElement('button');b.className='button'+(i==0?' on':'');b.textContent=m;b.onclick=()=>{
+ mb.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+ curMix=m;mix.data.datasets[0].label=m;mix.data.datasets[0].data=mixViews[m].d;mix.data.datasets[0].backgroundColor=i?C.s3:C.s1;mix.update();};mb.appendChild(b);});
+
+</script>
+	</body>
+</html>
